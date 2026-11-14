@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto formulario</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3">
+                <form id="form" action="">
+                    <div class="form-floating mb-2">
+                        <input id="nombre" name="nombre" class="form-control" type="text" placeholder="Pepe Grillo" required autofocus pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+(?:\s+[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+)*"/>
+                        <label for="nombre">Nombres</label>
+                        <span class="text-danger" id="error_nombre"></span>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input id="apellido" name="apellido" class="form-control" type="text" placeholder="Pérez Pérez" required autofocus pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+(?:\s+[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]+)*"/>
+                        <label for="apellido">Apellidos</label>
+                        <span class="text-danger invisible" id="error_apellido"></span>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input id="edad" name="edad" class="form-control" type="number" placeholder="25" required  min="1" max="120" pattern="(?:[1-9]|[1-9]\d|1[01]\d|120)"/>
+                        <label for="edad">Edad</label>
+                        <span class="text-danger invisible" id="error_edad"></span>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input id="telefono" name="telefono" class="form-control" type="tel" placeholder="46391234" required pattern="[0-9]{8}"/>
+                        <label for="telefono">Teléfono</label>
+                        <span class="text-danger invisible" id="error_telefono"></span>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input id="email" name="email" class="form-control" type="email" placeholder="pepe.grillo@nauta.cu" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+"/>
+                        <label for="email">E-mail</label>
+                        <span class="text-danger invisible" id="error_email"></span>
+                    </div>
+                    <div class="form-floating">
+                        <input id="pass1" name="pass1" class="form-control" type="password" placeholder="" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}"/>  
+                        <label for="pass1">Contraseña</label>
+                    </div>
+                    <div class="form-floating mb-2">
+                        <input id="pass2" name="pass2" class="form-control" type="password" placeholder="" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}"/>
+                        <label for="pass2">Escriba otra vez la Contraseña</label>
+                        <span class="text-danger invisible" id="error_pass"></span>
+                    </div>
+                    <button id="boton" class="btn btn-primary" type="submit" disabled>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
